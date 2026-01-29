@@ -10,78 +10,90 @@
 <body>
 
     <div id="slide1" class="slide active">
-        <div class="moon-container">
-            <div class="moon"></div>
-            <h1 class="noor-text">Noor</h1>
+        <div class="content-wrapper">
+            <div class="moon-container">
+                <div class="moon"></div>
+                <h1 class="noor-text">Noor</h1>
+            </div>
+            <div class="note-simple">
+                <p>Zameen par chaand kahan hota hai...</p>
+                <p>Maine toh bas apni <strong>Noor</strong> ko dekha hai. ✨</p>
+            </div>
         </div>
-        <div class="note-simple">
-            <p>Zameen par chaand kahan hota hai...</p>
-            <p>Maine toh bas apni <strong>Noor</strong> ko dekha hai. ✨</p>
-        </div>
-        <button class="nextBtn" onclick="nextSlide(1)">Next →</button>
+        <button class="nextBtn" onclick="goToSlide(2)">Next →</button>
     </div>
 
     <div id="slide2" class="slide">
-        <div class="notebook-paper">
-            <div class="red-margin"></div>
-            <div class="corner-heart">❤️</div>
-            <div class="shayari-text">
-                "Jhuth mt bolo.. Tutte taare ke liye har koi dua krta he .. <br>
-                Aur Jiska naam khud noor ho uske liye to khuda bhi marta he.."
+        <div class="content-wrapper">
+            <div class="notebook-paper">
+                <div class="red-margin"></div>
+                <div class="corner-heart">❤️</div>
+                <div class="shayari-text">
+                    "Jhuth mt bolo.. Tutte taare ke liye har koi dua krta he .. <br>
+                    Aur Jiska naam khud noor ho uske liye to khuda bhi marta he.."
+                </div>
             </div>
         </div>
-        <button class="nextBtn" onclick="nextSlide(2)">Next →</button>
+        <button class="nextBtn" onclick="goToSlide(3)">Next →</button>
     </div>
 
     <div id="slide3" class="slide">
-        <div class="notebook-paper">
-            <div class="red-margin"></div>
-            <div class="corner-heart">❤️</div>
-            <div class="shayari-text">
-                "Tujhko dekha to guroor aa gya.. Jamane bhar pe Kasoor aa gya, <br>
-                Roj intejaar me the jiske aane ke,, <br>
-                Dekho aj humare pass khud Noor aa gya.."
+        <div class="content-wrapper">
+            <div class="notebook-paper">
+                <div class="red-margin"></div>
+                <div class="corner-heart">❤️</div>
+                <div class="shayari-text">
+                    "Tujhko dekha to guroor aa gya.. Jamane bhar pe Kasoor aa gya, <br>
+                    Roj intejaar me the jiske aane ke,, <br>
+                    Dekho aj humare pass khud Noor aa gya.."
+                </div>
             </div>
         </div>
-        <button class="nextBtn" onclick="nextSlide(3)">Next →</button>
+        <button class="nextBtn" onclick="goToSlide(4)">Next →</button>
     </div>
 
     <div id="slide4" class="slide">
-        <div class="interaction-area">
-            <img src="girl.png" class="char-img girl-img" alt="Girl">
-            <img src="boy.png" id="boySticker" class="char-img boy-img" alt="Boy">
-            <div id="heartContainer"></div>
+        <div class="content-wrapper">
+            <div class="interaction-area">
+                <img src="girl.png" class="char-img girl-img" alt="Girl">
+                <img src="boy.png" id="boySticker" class="char-img boy-img" alt="Boy">
+                <div id="heartContainer"></div>
+            </div>
+            <div class="slider-container">
+                <p>Hume kareeb laiye...</p>
+                <input type="range" id="loveSlider" min="0" max="100" value="0">
+            </div>
         </div>
-        <div class="slider-container">
-            <p>Hume kareeb laiye...</p>
-            <input type="range" id="loveSlider" min="0" max="100" value="0">
-        </div>
-        <button id="memoriesBtn" class="nextBtn" style="display:none;" onclick="nextSlide(4)">Next →</button>
+        <button id="memoriesBtn" class="nextBtn" style="display:none;" onclick="goToSlide(5)">Next →</button>
     </div>
 
     <div id="slide5" class="slide">
-        <h2 class="gallery-title">Our Memories</h2>
-        <div class="gallery-grid">
-            <img src="photo1.jpg" onclick="openPhoto(this.src)">
-            <img src="photo2.jpg" onclick="openPhoto(this.src)">
-            <img src="photo3.jpg" onclick="openPhoto(this.src)">
-            <img src="photo4.jpg" onclick="openPhoto(this.src)">
-            <img src="photo5.jpg" onclick="openPhoto(this.src)">
-            <img src="photo6.jpg" onclick="openPhoto(this.src)">
-            <img src="photo7.jpg" onclick="openPhoto(this.src)">
-            <img src="photo8.jpg" onclick="openPhoto(this.src)">
+        <div class="content-wrapper">
+            <h2 class="gallery-title">Our Memories</h2>
+            <div class="gallery-grid">
+                <img src="photo1.jpg" onclick="openPhoto(this.src)">
+                <img src="photo2.jpg" onclick="openPhoto(this.src)">
+                <img src="photo3.jpg" onclick="openPhoto(this.src)">
+                <img src="photo4.jpg" onclick="openPhoto(this.src)">
+                <img src="photo5.jpg" onclick="openPhoto(this.src)">
+                <img src="photo6.jpg" onclick="openPhoto(this.src)">
+                <img src="photo7.jpg" onclick="openPhoto(this.src)">
+                <img src="photo8.jpg" onclick="openPhoto(this.src)">
+            </div>
         </div>
-        <button class="nextBtn" onclick="nextSlide(5)">The End →</button>
-
+        <button class="nextBtn" onclick="goToSlide(6)">The End →</button>
+        
         <div id="photoViewer" class="viewer" onclick="closePhoto()">
             <img id="fullPhoto">
-            <p style="color:white;">Click anywhere to close</p>
+            <p style="color:white; margin-top:10px;">Click anywhere to close</p>
         </div>
     </div>
 
     <div id="slide6" class="slide">
-        <h1 class="ily-text">I Love You ❤️</h1>
-        <div id="theEnd" class="the-end" style="opacity:0;">The End</div>
+        <div class="content-wrapper">
+            <h1 class="ily-text">I Love You ❤️</h1>
+            <div id="theEnd" class="the-end" style="opacity:0;">The End</div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
